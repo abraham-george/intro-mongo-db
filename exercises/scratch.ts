@@ -36,4 +36,7 @@
  *              eg: School.findOneAndUpdate({name: 'Loyola'}, {name: 'Loyola'}, {upsert: true, new: true}).exec()
  * -        findOne()
  *              - Find one based on filter 
+ * 
+ * -        Hooks, Virtuals & Indexes
+ *           
  */

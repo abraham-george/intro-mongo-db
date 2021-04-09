@@ -4,27 +4,27 @@ const connect = () => {
     return mongoose.connect('mongodb://localhost:27017/todos')
 }
 
-const student = new mongoose.Schema({
-    firstName: {
-        type: String,
-        required: true,
-        unique: true
-    },
-    info: {
-        school: {
-            type: String
-        },
-        shoeSize: {
-            type: Number
-        }
-    },
-    favFoods: [{ type: String }],
-    school: {
-        type: mongoose.Schema.Types.ObjectId,
-        required: true,
-        ref: 'school'
-    }
-}, {timestamps: true})
+// const student = new mongoose.Schema({
+//     firstName: {
+//         type: String,
+//         required: true,
+//         unique: true
+//     },
+//     info: {
+//         school: {
+//             type: String
+//         },
+//         shoeSize: {
+//             type: Number
+//         }
+//     },
+//     favFoods: [{ type: String }],
+//     school: {
+//         type: mongoose.Schema.Types.ObjectId,
+//         required: true,
+//         ref: 'school'
+//     }
+// }, {timestamps: true})
 
 const school = new mongoose.Schema({
     name: String,
@@ -34,7 +34,7 @@ const school = new mongoose.Schema({
     staff: [{type: String}]
 })
 
-const Student = mongoose.model('student', student)
+//const Student = mongoose.model('student', student)
 const School = mongoose.model('school', school)
 
 connect()
