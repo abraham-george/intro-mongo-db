@@ -39,5 +39,6 @@
  * 
  * -        Hooks, Virtuals & Indexes
  * -        lean(), toJSON(), toObject() -> optimize queries
+ * -        res.send(500).send()
  *           
  */
