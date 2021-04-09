@@ -38,5 +38,6 @@
  *              - Find one based on filter 
  * 
  * -        Hooks, Virtuals & Indexes
+ * -        lean(), toJSON(), toObject() -> optimize queries
  *           
  */
