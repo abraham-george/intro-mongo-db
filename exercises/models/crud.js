@@ -1,23 +1,14 @@
 const User = require('./user')
 
-const getUserById = (id) => {
- 
-}
+const getUserById = (id) => User.findById(id).exec()
 
-const getAllUsers = () => {
+const getAllUsers = () => User.find({}).exec()
+
+const createUser = (userDetails) => User.create(userDetails)
   
-}
+const removeUserById = (id) => User.findByIdAndRemove(id).exec()
 
-const createUser = (userDetails) => {
-  
-}
-const removeUserById = (id) => {
-  
-}
-
-const updateUserById = (id, update) => {
-
-}
+const updateUserById = (id, update) => User.findByIdAndUpdate(id, update, {new: true}).exec()
 
 module.exports = {
   getUserById,
