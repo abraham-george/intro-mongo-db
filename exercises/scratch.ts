@@ -19,4 +19,21 @@
  *          - findById
  *          - findByIdAndUpdate
  * 
+ * -    Notes on nested schema, ref tables, populate()
+ *          If you want a field to refer to another field, we can either do
+ *              (1) Nested schema(never do it in prod)
+ *              (2) Create a differnt schema and add a ref where needed
+ *      
+ *          If you are referring to a field from another collection,
+ *          eg:
+ *              school:{
+ *                  type: mongoose.Schema.Types.ObjectId,
+ *                  ref: 'school'
+ *              }
+ * 
+ * -        findOneAndUpdate()
+ *              - Update or create an entry
+ *              eg: School.findOneAndUpdate({name: 'Loyola'}, {name: 'Loyola'}, {upsert: true, new: true}).exec()
+ * -        findOne()
+ *              - Find one based on filter 
  */
